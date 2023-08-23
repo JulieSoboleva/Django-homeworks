@@ -28,3 +28,13 @@ DATA = {
 #     'ингредиент2': количество2,
 #   }
 # }
+
+
+def get_recipe(request, name):
+    count = 1
+    if request.GET.get('servings') is not None:
+        count = int(request.GET['servings'])
+    if count < 1:
+        count = 1
+    return render(request, 'calculator/index.html',
+                  {'recipe': DATA.get(name), 'servings': count})
