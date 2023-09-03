@@ -3,8 +3,8 @@
     "model": "books.book",
     "pk": 1,
     "fields": {
-      "name": "Война и мир",
-      "author": "Ф.Д. Достоевский",
+      "name": "Идиот",
+      "author": "Ф.М. Достоевский",
       "pub_date": "2018-02-27"
     }
   },
@@ -15,6 +15,51 @@
       "name": "1984",
       "author": "Джордж Оруэл",
       "pub_date": "2016-12-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "name": "Сияние",
+      "author": "Стивен Кинг",
+      "pub_date": "2018-09-10"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Мастер и Маргарита",
+      "author": "Михаил Булгаков",
+      "pub_date": "2019-08-30"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "name": "Три мушкетёра",
+      "author": "А. Дюма",
+      "pub_date": "2017-11-12"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "name": "Горе от ума",
+      "author": "А. Грибоедов",
+      "pub_date": "2016-12-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "name": "Дубровский",
+      "author": "А.С. Пушкин",
+      "pub_date": "2017-06-06"
     }
   }
 ]
