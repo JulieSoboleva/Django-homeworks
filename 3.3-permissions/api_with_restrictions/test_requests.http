@@ -1,0 +1,59 @@
+@baseUrl = http://localhost:8000/api
+
+GET {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 6cf2cb482d918781d4494c5d769f0f62865bb5bb
+
+###
+
+# создание объявления
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 6cf2cb482d918781d4494c5d769f0f62865bb5bb
+
+{
+    "title": "Шкафчик от John",
+    "description": "Универсальная вещь"
+}
+
+###
+
+# попытка поменять объявление
+PATCH {{baseUrl}}/advertisements/18/
+Content-Type: application/json
+Authorization: Token 580e45059aa0bcb2d9401398c843352efd8d0649
+
+{
+    "status": "CLOSED"
+}
+
+###
+
+DELETE {{baseUrl}}/advertisements/17/
+Content-Type: application/json
+Authorization: Token f16738278365e4aefc89d1cd9e16594059cef75d
+
+
+###
+
+# фильтрация по создателю
+GET {{baseUrl}}/advertisements/?creator=3&status=OPEN
+Content-Type: application/json
+
+###
+
+# фильтрация по дате
+GET {{baseUrl}}/advertisements/?created_at_after=2023-10-07
+Content-Type: application/json
+
+###
+# добавление в избранное
+GET {{baseUrl}}/advertisements/18/favorite/
+Content-Type: application/json
+Authorization: Token f16738278365e4aefc89d1cd9e16594059cef75d
+
+###
+
+GET {{baseUrl}}/advertisements/favorites/
+Content-Type: application/json
+Authorization: Token f16738278365e4aefc89d1cd9e16594059cef75d
